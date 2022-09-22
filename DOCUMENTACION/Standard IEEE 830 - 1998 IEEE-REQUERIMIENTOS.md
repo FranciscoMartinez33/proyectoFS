@@ -1,11 +1,6 @@
 
 https://acceso.ispc.edu.ar/mod/book/view.php?id=32064&chapterid=4265
 
-Restricciones
-• Interfaz para ser usada con internet.
-• Lenguajes y tecnologías en uso: HTML, CSS, JavaScript
-• El sistema se diseñará según un modelo cliente/servidor.
-
 
 ************** Requisitos del usuario ************** nombre Usuario
 Características de los usuarios
