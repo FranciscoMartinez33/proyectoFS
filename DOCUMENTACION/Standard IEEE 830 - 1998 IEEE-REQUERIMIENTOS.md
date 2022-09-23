@@ -44,6 +44,27 @@ Nombre del Requerimiento: Rf05:
 Poder modificar datos personales y de autenticazión
 
 
+Nombre del Requerimiento: Rf06
+Cargar datos personales de talla 
+(Los datos personales de talla, serán requeridos obligatoriamente para la compra customizada (en el caso de no optar por medida standar)
+El usuario debe ingresar, a través de un formulario brindado, la cantidad de datos que se le solicita (Allí ingresará las medidas que el sistema le pedirá. Es obligatorio validar que sean completadas todas las medidas)
+Se generará un sistema propio de talle.
+
+Nombre del Requerimiento Rf07:
+Guardar el sistema de talla personal generado por el formulario (posterior a la carga de datos, Rf03)
+Para este requerimiento SÍ se necesita estar registrado en la plataforma
+
+
+Nombre del Requerimiento Rf08:
+Ver el sistema de talle personal para verificar los datos cargados en la plataforma
+Para este requerimiento SÍ se necesita estar registrado en la plataforma
+
+Nombre del Requerimiento Rf09:
+Poder modificar el sistema de talla personal guardado según el cliente lo desee o necesitase.
+Para este requerimiento SÍ se necesita estar registrado en la plataforma
+
+
+
 ************** Requisitos del sistema ************** abreviatura ERS Especificación de Requisitos Software
 Restricciones:
 • Interfaz para ser usada con internet.
