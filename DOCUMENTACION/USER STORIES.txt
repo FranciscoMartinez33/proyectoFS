@@ -2,10 +2,10 @@ USER STORIES
 
 # US_01. yo como administrador quiero crear una sitio web para promocionar disenadores locales y su respectiva indumentaria.
 # US_02. YO como administrador quiero tener privilegios para decidir sobre que se mostrara.
-# US_03. yo como administrador quiero elegir que pueden mostrar los disenadores.
-# US_04. yo como administrador quiero elegir que pueden ver los usuarios del sitio.
+# US_03. yo como administrador quiero elegir que pueden mostrar los disenadores para respetar las premisas del sitio.
+# US_04. yo como administrador quiero elegir que pueden ver los usuarios del sitio para lograr un control.
 # US_05. yo como usuario quiero ver la indumentaria diferenciada por genero para mayor facilidad.
-# US_06. yo como usuario quiero ver la indumentaria tanto en 2D como 3D.
+# US_06. yo como usuario quiero ver la indumentaria tanto en 2D como 3D para visualizarla con detalles.
 # US_07. yo como usuario quiero registrarme para asentar mis preferencias.
-# US_08. yo como usuario quiero realizar consultas sobre disenos a pedido.
-# US_09. YO como usuario quiero comprar la indumentaria a traves de billetera virtual.
+# US_08. yo como usuario quiero realizar consultas sobre disenos a pedido para satisfacer gustos personales.
+# US_09. YO como usuario quiero comprar la indumentaria a traves de billetera virtual para mayor comodidad.
