@@ -6,12 +6,17 @@ https://acceso.ispc.edu.ar/mod/book/view.php?id=32064&chapterid=4265
 Características de los usuarios
 Tipo de usuario: consumidor de indumentaria y accesorios
 
-
-
 ************** Requisitos funcionales ************** abreviatura RF
 
+Nombre del Requerimiento: Rf 01
+Mostrar listado de todos los productos 
+
+Permitir el filtrado del listado de productos 
+Se podrán listas los mismos por precio (de mayor a  menor, y de menor a myor), permitir el filtrado a partir del nombre de diseñador/a o marca, permitir el filtrado por talle estandar, permitir el filtrado de prendas customizables.
+NO hace falta estar registrado para acceder a estas funcionalidades
+
 Nombre del Requerimiento:
-Registrar Usuarios. Rf01
+Registrar Usuarios. Rf02
 
 El usuario debe suministrar datos básicos obligatorios como: Nombre, Apellido, lugar de residencia en Argentina (otorgando los datos de Provincia, Ciudad, calle y número de casa / edificio, Código Postal, teléfono celular) 
 
@@ -21,14 +26,22 @@ El usuario deberá seleccionar un Nombre de Usuario que se mostrará en la pági
 
 Ingresarán una contraseña de 6 caracteres dos veces para confirmar la selección (Esta contraseña se pedirá a la hora de autenticarse)
 
-
-Nombre del Requerimiento: 
-Autenticación del usuario e ingresos permitidos Rf02
+Nombre del Requerimiento:  Rf03
+Autenticación del usuario e ingresos permitidos
 
 Los usuarios deberán identificarse para acceder a la sección de sus datos y comprar productos
 Los usuarios autenticados podrán ingresar a su portal con contraseña y casilla de correo con formato válido.
 La autenticación no será necesaria en el caso de la visualización de los ítems pero no se podrán agregar favoritos, sí se podrán cargar ítems al carrito de compras.
-Pero será necesaria la carga de datos personales que, en el caso de estar registrado, será una carga automática con la información guardada previamente.
+En el caso de estar registrado, será una carga automática con la información guardada previamente.
+
+Nombre del Requerimiento: Rf04:
+Guardar datos personales y de autenticazión 
+
+Nombre del Requerimiento: Rf05:
+Poder visualizar los datos personales y de autenticazión en el portal de la cuenta personal
+
+Nombre del Requerimiento: Rf05:
+Poder modificar datos personales y de autenticazión
 
 
 ************** Requisitos del sistema ************** abreviatura ERS Especificación de Requisitos Software
