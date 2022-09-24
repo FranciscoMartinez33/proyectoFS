@@ -1,25 +1,33 @@
 
-[![imagen-desarrollo-web-full-stack.jpg](https://i.postimg.cc/8cdhymm4/imagen-desarrollo-web-full-stack.jpg)](https://postimg.cc/BP6LbDyP)
+![image](https://user-images.githubusercontent.com/63260839/192121859-9cc65987-f4a9-4af1-9229-cc4421fc07b6.png)
 
 
 ## Integrantes: :heavy_check_mark:
 
-•	Ricardo Enrique Apfelbaum
 
-•	Juan Carlos narvaez
+•	Antonini, Carla Gisele
+  https://github.com/Gaghyta
 
-•	Emilio Andres Vera
+•	Apfelbaum, Ricardo Enrique
+   https://github.com/ricardoeapfelbaum
 
-•	Martiniano Jose Lurgo Johnston
+•	Cáceres, Yamila Belén
 
-•	Cintia Osorio Duarte
+•	Narvaez, Juan Carlos 
 
-•	Cáceres Yamila Belén
+•	Martinez, Francisco 
+  https://github.com/FranciscoMartinez33
+  
+•	Martiniano, Jose Lurgo Johnston
 
-•	Antonini Carla Gisele
+•	Osorio Duarte, Cintia 
+  https://github.com/CintiaOsorioDuartesakura
 
-• Jesús Fernando Torres
+•	Schejtman, Daniela 
 
-•	Francisco Martinez
+• Torres, Jesús Fernando 
+  https://github.com/JFerT
 
-•	Daniela Schejtman
+•	Vera, Emilio Andres
+  https://github.com/evera8
+
