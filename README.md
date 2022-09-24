@@ -32,7 +32,7 @@
   https://github.com/evera8
 
 
-R E S U M E N   P R O Y E C T O
+* R E S U M E N  *  P R O Y E C T O *
 
 Venta de indumentaria digital y customizada. 
 
