@@ -1,4 +1,6 @@
+
 [![imagen-desarrollo-web-full-stack.jpg](https://i.postimg.cc/8cdhymm4/imagen-desarrollo-web-full-stack.jpg)](https://postimg.cc/BP6LbDyP)
+
 
 ## Integrantes: :heavy_check_mark:
 
