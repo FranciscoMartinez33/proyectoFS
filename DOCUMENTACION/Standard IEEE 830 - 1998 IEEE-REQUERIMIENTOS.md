@@ -12,7 +12,7 @@ Nombre del Requerimiento: Rf 01
 Mostrar listado de todos los productos 
 
 Permitir el filtrado del listado de productos 
-Se podrán listas los mismos por precio (de mayor a  menor, y de menor a myor), permitir el filtrado a partir del nombre de diseñador/a o marca, permitir el filtrado por talle estandar, permitir el filtrado de prendas customizables.
+Se podrán listas los mismos por precio (de mayor a  menor, y de menor a mayor), permitir el filtrado a partir del nombre de diseñador/a o marca, permitir el filtrado por talle estándar, permitir el filtrado de prendas 'personalizables/ customizables'.
 NO hace falta estar registrado para acceder a estas funcionalidades
 
 Nombre del Requerimiento:
@@ -35,18 +35,18 @@ La autenticación no será necesaria en el caso de la visualización de los íte
 En el caso de estar registrado, será una carga automática con la información guardada previamente.
 
 Nombre del Requerimiento: Rf04:
-Guardar datos personales y de autenticazión 
+Guardar datos personales y de autenticación 
 
 Nombre del Requerimiento: Rf05:
-Poder visualizar los datos personales y de autenticazión en el portal de la cuenta personal
+Poder visualizar los datos personales y de autenticación en el portal de la cuenta personal
 
 Nombre del Requerimiento: Rf05:
-Poder modificar datos personales y de autenticazión
+Poder modificar datos personales y de autenticación
 
 
 Nombre del Requerimiento: Rf06
 Cargar datos personales de talla 
-(Los datos personales de talla, serán requeridos obligatoriamente para la compra customizada (en el caso de no optar por medida standar)
+(Los datos personales de talla, serán requeridos obligatoriamente para la compra 'personalizada/ customizada' (en el caso de no optar por medida estándar)
 El usuario debe ingresar, a través de un formulario brindado, la cantidad de datos que se le solicita (Allí ingresará las medidas que el sistema le pedirá. Es obligatorio validar que sean completadas todas las medidas)
 Se generará un sistema propio de talle.
 
@@ -61,7 +61,32 @@ Para este requerimiento SÍ se necesita estar registrado en la plataforma
 
 Nombre del Requerimiento Rf09:
 Poder modificar el sistema de talla personal guardado según el cliente lo desee o necesitase.
-Para este requerimiento SÍ se necesita estar registrado en la plataforma
+Para este requerimiento SÍ se necesita estar registrado en la plataforma.
+
+
+Nombre del Requerimiento Rf10:
+Seleccionar ítems del listado (opciones luego de la selección en Rf11, Rf12, Rf13)
+
+Nombre del Requerimiento Rf11:
+Poseer  niveles de accesos a la información (uno inmediato, con información básica, otro/s que requiera/n la acción de conseguir más información por parte del usuario si el ítem ofrecido es de su interés)
+
+Nombre del Requerimiento Rf12:
+Poder agregar el ítem sobre el cual el usuario tiene interés y guardarlo en su perfil de usuario para tener un marcador 
+
+Nombre del Requerimiento Rf13:
+agregar ítem al carrito de compras
+
+
+Nombre del Requerimiento Rf14:
+Ver ítems agregados en el carrito de compras
+
+Nombre del Requerimiento Rf15:
+Modificar ítems agregados en el carrito de compras
+
+Nombre del Requerimiento Rf16:
+Vaciar carrito de compras
+
+
 
 
 
@@ -72,11 +97,15 @@ Restricciones:
 • El sistema se diseñará según un modelo cliente/servidor.
 
 VER ** Requerimientos NO Funcionales (usabilidad- experiencia del usuario) abreviatura RNF 
-(Los requerimientos no funcionalesno están clasificados en la explicación de la plataforma pero están en el standar IEEE 830)
+(Los requerimientos no funcionales no están clasificados en la explicación de la plataforma pero están en el estándar IEEE 830)
 
   1)El sistema deberá tener un diseño minimalista que priorice la visualización correcta de las imágenes a través de las cuales el usuario seleccionará el indumento o accesorio a fabricar
   2) Uso de formas regulares y geométricas simples
   3) Paleta cromática restringida (3/4)
+
+En relación con los requisitos funcionales Rf11 Visualizar en una instancia  información del ítem de forma global  
+Visualizar en una instancia  información del ítem más detallada 
+
 
 
 
