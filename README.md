@@ -13,12 +13,12 @@
 
 •	Cáceres, Yamila Belén
 
-•	Narvaez, Juan Carlos 
-
 •	Martinez, Francisco 
   https://github.com/FranciscoMartinez33
   
 •	Martiniano, Jose Lurgo Johnston
+
+•	Narvaez, Juan Carlos 
 
 •	Osorio Duarte, Cintia 
   https://github.com/CintiaOsorioDuartesakura
