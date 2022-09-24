@@ -4,7 +4,7 @@
 
 ## Integrantes: :heavy_check_mark:
 
-•	 Ricardo Enrique Apfelbaum
+•	Ricardo Enrique Apfelbaum
 
 •	Juan Carlos narvaez
 
@@ -18,7 +18,7 @@
 
 •	Antonini Carla Gisele
 
-•Jesús Fernando Torres
+• Jesús Fernando Torres
 
 •	Francisco Martinez
 
