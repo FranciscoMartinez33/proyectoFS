@@ -21,7 +21,7 @@ Se invita a la comunidad de diseñadores de indumentaria a incorporar y ofrecer 
   https://github.com/Gaghyta
 
 •	Apfelbaum, Ricardo Enrique
-   https://github.com/ricardoeapfelbaum
+  https://github.com/ricardoeapfelbaum
 
 •	Cáceres, Yamila Belén
 
@@ -29,6 +29,7 @@ Se invita a la comunidad de diseñadores de indumentaria a incorporar y ofrecer 
   https://github.com/FranciscoMartinez33
   
 •	Martiniano, Jose Lurgo Johnston
+  https://github.com/MartinianoLurgo
 
 •	Narvaez, Juan Carlos 
 
