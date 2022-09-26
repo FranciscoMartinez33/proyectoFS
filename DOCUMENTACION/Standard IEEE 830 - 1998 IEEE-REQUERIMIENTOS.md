@@ -86,7 +86,23 @@ Modificar ítems agregados en el carrito de compras
 Nombre del Requerimiento Rf16:
 Vaciar carrito de compras
 
+Nombre del Requerimiento Rf17:
+seleccionar método de pago (efectivo o tarjeta)
 
+Nombre del Requerimiento Rf18:
+Caso de tarjeta de crédito: cargar datos de tarjeta (crédito)
+
+Nombre del Requerimiento Rf19:
+Caso de tarjeta de débito: cargar datos de tarjeta (débito)
+
+Nombre del Requerimiento Rf20:
+Mostrar cuotas sin interés según tarjeta
+
+Nombre del Requerimiento Rf21:
+Mostrar mensaje que se realiza la compra en un pago
+
+Nombre del Requerimiento Rf22:
+seleccionar envío (punto de entrega o envío a domicilio)
 
 
 
