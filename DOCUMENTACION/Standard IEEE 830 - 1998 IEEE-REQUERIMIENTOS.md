@@ -2,9 +2,58 @@
 https://acceso.ispc.edu.ar/mod/book/view.php?id=32064&chapterid=4265
 
 
+Introducción
+
+Propósito
+Ambito del Sistema
+Definiciones, Acrónimos y Abreviaturas
+Referencias
+Visi ́on General del Documento
+
+
+Descripción General
+
+Perspectiva del Producto
+Funciones del Producto
+
+
+************** Funciones ************** 
+
+Acciones expresables como “el sistema deberá ...”.
+Si se considera necesario, podr ́an utilizarse notaciones
+gráficas y tablas
+
+Por tipos de usuario:
+Por objetos:
+Por objetivos:
+Por estımulos:
+Por jerarquıa funcional:
+
+
+
 ************** Requisitos del usuario ************** nombre Usuario
 Características de los usuarios
 Tipo de usuario: consumidor de indumentaria y accesorios
+
+
+
+************** Requisitos del sistema ************** abreviatura ERS Especificación de Requisitos Software
+Restricciones:
+• Interfaz para ser usada con internet.
+• Lenguajes y tecnologías en uso: HTML, CSS, JavaScript.
+• El sistema se diseñará según un modelo cliente/servidor.
+
+
+
+************** Suposiciones y Dependencias ************** 
+
+************** Requisitos Futuros ************** 
+
+futuras mejoras al sistema
+
+
+
+************** Requisitos Especificos ************** 
 
 ************** Requisitos funcionales ************** abreviatura RF
 
@@ -13,7 +62,7 @@ Mostrar listado de todos los productos.
 
 Permitir el filtrado del listado de productos. 
 Se podrán listas los mismos por precio (de mayor a  menor, y de menor a mayor), permitir el filtrado a partir del nombre de diseñador/a o marca, permitir el filtrado por talle estándar, permitir el filtrado de prendas 'personalizables/ customizables'.
-NO hace falta estar registrado para acceder a estas funcionalidades
+NO hace falta estar registrado para acceder a estas funcionalidades.
 
 Nombre del Requerimiento:
 Registrar Usuarios. Rf02
@@ -105,22 +154,29 @@ Nombre del Requerimiento Rf22:
 seleccionar envío (punto de entrega o envío a domicilio).
 
 
-
-************** Requisitos del sistema ************** abreviatura ERS Especificación de Requisitos Software
-Restricciones:
-• Interfaz para ser usada con internet.
-• Lenguajes y tecnologías en uso: HTML, CSS, JavaScript
-• El sistema se diseñará según un modelo cliente/servidor.
-
-VER ** Requerimientos NO Funcionales (usabilidad- experiencia del usuario) abreviatura RNF 
+VER ******************************** Requerimientos NO Funcionales ********************************
+(usabilidad- experiencia del usuario) abreviatura RNF 
 (Los requerimientos no funcionales no están clasificados en la explicación de la plataforma pero están en el estándar IEEE 830)
 
+<<<<<<< Updated upstream
   1)El sistema deberá tener un diseño minimalista que priorice la visualización correcta de las imágenes a través de las cuales el usuario seleccionará el indumento o accesorio a fabricar.
   2) Uso de formas regulares y geométricas simples.
   3) Paleta cromática restringida (3/4).
 
 En relación con los requisitos funcionales Rf11 Visualizar en una instancia  información del ítem de forma global  
 Visualizar en una instancia  información del ítem más detallada. 
+=======
+  1)El sistema deberá tener un diseño minimalista que priorice la visualización correcta de las imágenes a través de las cuales el usuario seleccionará el indumento o accesorio a fabricar
+  2) Uso de formas regulares y geométricas simples
+  3) Paleta cromática restringida (3/4)
+
+En relación con los requisitos funcionales Rf11 Visualizar en una instancia  información del ítem de forma global  
+Visualizar en una instancia  información del ítem más detallada 
+
+>>>>>>> Stashed changes
+
+
+
 
 
 
