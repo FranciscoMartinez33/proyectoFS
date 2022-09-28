@@ -33,6 +33,7 @@ Se invita a la comunidad de diseñadores de indumentaria a incorporar y ofrecer 
   https://github.com/MartinianoLurgo
 
 •	Narvaez, Juan Carlos 
+  https://github.com/ProgramadorPegasus
 
 •	Osorio Duarte, Cintia 
   https://github.com/CintiaOsorioDuartesakura
