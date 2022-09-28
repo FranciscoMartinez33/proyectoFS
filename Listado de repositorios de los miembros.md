@@ -7,6 +7,7 @@ Listado de repositorios del grupo:
         Emilio Andres Vera:
 
         Martiniano Jose Lurgo Johnston:
+        https://github.com/MartinianoLurgo
 
         Cintia Osorio Duarte:
         https://github.com/CintiaOsorioDuartesakura
