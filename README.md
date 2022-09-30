@@ -24,6 +24,7 @@ Se invita a la comunidad de diseñadores de indumentaria a incorporar y ofrecer 
   https://github.com/ricardoeapfelbaum
 
 •	Cáceres, Yamila Belén
+  https://github.com/Yamiibel
 
 •	Martinez, Francisco 
   https://github.com/FranciscoMartinez33
@@ -32,6 +33,7 @@ Se invita a la comunidad de diseñadores de indumentaria a incorporar y ofrecer 
   https://github.com/MartinianoLurgo
 
 •	Narvaez, Juan Carlos 
+  https://github.com/ProgramadorPegasus
 
 •	Osorio Duarte, Cintia 
   https://github.com/CintiaOsorioDuartesakura
