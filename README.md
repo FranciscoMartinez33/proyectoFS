@@ -1,23 +1,48 @@
-[![imagen-desarrollo-web-full-stack.jpg](https://i.postimg.cc/8cdhymm4/imagen-desarrollo-web-full-stack.jpg)](https://postimg.cc/BP6LbDyP)
+
+![image](https://user-images.githubusercontent.com/63260839/192121859-9cc65987-f4a9-4af1-9229-cc4421fc07b6.png)
+
+## RESUMEN DEL PROYECTO
+Venta de indumentaria digital y customizada. 
+
+Comunidad abierta a la incorporación continua de más diseños y de diferentes diseñadores. 
+
+Carrito de compras. 
+
+Imágenes de las prendas 2d y 3d.
+
+Datos de cliente guardados (incluye formulario con tabla de talles y preferencias constructivas de las prendas o accesorios).
+
+Se invita a la comunidad de diseñadores de indumentaria a incorporar y ofrecer a la venta sus diseños 3d.
 
 ## Integrantes: :heavy_check_mark:
 
-•	 Ricardo Enrique Apfelbaum
 
-•	Juan Carlos narvaez
+•	Antonini, Carla Gisele
+  https://github.com/Gaghyta
 
-•	Emilio Andres Vera
+•	Apfelbaum, Ricardo Enrique
+  https://github.com/ricardoeapfelbaum
 
-•	Martiniano Jose Lurgo Johnston
+•	Cáceres, Yamila Belén
+  https://github.com/Yamiibel
 
-•	Cintia Osorio Duarte
+•	Martinez, Francisco 
+  https://github.com/FranciscoMartinez33
+  
+•	Martiniano, Jose Lurgo Johnston
+  https://github.com/MartinianoLurgo
 
-•	Cáceres Yamila Belén
+•	Narvaez, Juan Carlos 
+  https://github.com/ProgramadorPegasus
 
-•	Antonini Carla Gisele
+•	Osorio Duarte, Cintia 
+  https://github.com/CintiaOsorioDuartesakura
 
-•Jesús Fernando Torres
+•	Schejtman, Daniela 
 
-•	Francisco Martinez
+• Torres, Jesús Fernando 
+  https://github.com/JFerT
 
-•	Daniela Schejtman
+•	Vera, Emilio Andres
+  https://github.com/evera8
+
