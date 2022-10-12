@@ -163,11 +163,11 @@ footer .navbar {
 /* * ============================== */
 /* * ========== CONTACTO ========== */
 /* * ============================== */
-.form-contacto {
+.form {
 	display: flex;
 	flex-direction: column;
 }
-.form-contacto>* {
+.form>* {
 	margin: 2%;
 	padding: 1%;
 	font-family: 'Noto Sans JP', sans-serif;
