@@ -1,0 +1,56 @@
+1) Nombres	2) Apellidos	   	      3) Provincia	       4) Ciudad              5) Domicilio               6)Código Postal          7)Teléfono         7)DNI	            
+
+8)Email
+
+1) Jorge Francisco,  Márquez, Buenos Aires, Ciudad Autónoma de Buenos Aires, Paso 56, C1031ABB, 01149511339, 26.067.345
+
+email: jorgemarquez@hotmail.com
+
+
+
+2) Ivana Soledad, Avalos, Catamarca, San Fernando del Valle de Catamarca, De La Quintana 147, K4700, 03834231009, 26.365.617 
+
+email: ivita_avalos@gmail.com
+
+
+3) Mariel, Montalbam, Jujuy, San Salvador de Jujuy,Gral. Lavalle 546, Y4600EAL, 03884222447,26.731.564
+
+
+email: marita_montalbam@hotmail.com
+
+
+
+4) Andres Ricardo, Bravo, San Juan, Concepción, Marqués de Aguado 373,J5400CAE, 02644212020,30.892.662
+
+email: andre_bravo@gmail.com
+
+
+5) Jorge Horacio,Cassini, La Pampa, Gral. Pico, Av. San Martín 377, L6360, 02302334033,4.559.455 
+
+email: horaciocassini_12@hotmail.com
+
+
+6) Marcelo Ruben, Gazarrosian, Chubut, Puerto Madryn, Bolívar 100, U9120, 02804000233,23.944.667
+
+email: marcelo_gaza@hotmail.com
+
+
+7) Rita Alejandra, Bevilacqua, Santa Cruz,Río Gallegos, Avellaneda 297,Z9400, 02966346736,16.531.692
+
+email: aleale1964@gmail.com
+
+8) Cecilia Irene, Sokolow, Corrientes, Mercedes, España 1165, W3470, 03773420754,25.089.048
+
+email: sokolow_ire@hotmail.com
+
+
+9) Sofia Bianca, Fiszner, Entre Rios, Villaguay, Necochea 461,E3240EWI, 03455420298,40.642.774
+
+email: sofibianc1020@hotmail.com
+
+
+10) Francisca Emilia, Raffo, Santa Fé, Ciudad de Santa Fé, Pje. Ingenieros 7251,S3004LDI,03424691616,16883593
+
+email: franchemi@gmail.com
+
+
