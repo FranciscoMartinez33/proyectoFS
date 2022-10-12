@@ -1,0 +1,11 @@
+Nombres	Apellidos	DNI	Domicilio	Codigo Postal	Ciudad	Provincia	Telefono 	Email
+Jose 	Fernandez	32450226	Paso 235	1428	Capital Federal	Buenos Aires	1532049623	JosFer@yaya.com
+Maria 	Iriarte	20222412	Las flores 12	2645	Concordia	Entre Rios	3431164531	Maria.Iriarte@gmail.com
+Rogelio 	Paredes	12343256	Corralon 2424	4848	Posadas	Misiones	3764465740	r.p46@yahoo.com.ar
+Victoria 	Yplanes	25111523	Aviadores 23	1628	Beccard	Buenos Aires	1524875647	Victoria.Yplanes@hotmail.com
+Armando 	Rejas	35231987	Piedras 2828	450	Santa Fe	Santa Fe	3424441543	A.Rejas@gmail.com
+Lucia 	Fernandez	27658586	Posadas 1782	1544	Moreno	Buenos Aires	1546352178	LuciFer@gmail.com
+Martin	Oviedo	32478653	fleming 222	1248	Banfield	Buenos Aires	1534628887	M.Oviedo@yahoo.com
+Carolina	Hernandez	27436123	Cucha Cucha 2371	1142	San Miguel	Buenos Aires	1523334421	Carohernandez@gmail.com
+Javier 	Avalos	20735987	Rio negro 2147	1378	Capital Federal	Buenos Aires	1579861263	AvalosJavier@gmail.com
+Adam	Wood	92410561	Cuntanilla 248	1148	El Palomar	Buenos Aires	1541110666	wood23@yahoo.com

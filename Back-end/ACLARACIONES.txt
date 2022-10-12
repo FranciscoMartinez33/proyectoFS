@@ -1,0 +1,5 @@
+1_El usuario puede entrar a la pagina web y visualizar todos los productos.
+2_El usuario tiene la posibilidad de logiarse para dejar asentado en forma de texto sus medidas corporales para un producto determinado.
+3_Por el momento no existe carrito de compras.
+4_Ademas del usuario,en las circunstancias recien mencionadas,tambien esta la capacidad de logiarse tanto el administrador(dueño de la pagina web)como los distintos diseñadores.
+  Por este motivo se modela la capacidad de guardar contraseña es y seleccionar rol.
