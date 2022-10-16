@@ -24,10 +24,9 @@ body {
 
 .navbar {
 	background: #FFCD48;
-	position: sticky;
+	position: fixed;
 	top: 0;
-
-	
+	width: 100%;
 }
 
 .navbar a {
@@ -51,7 +50,7 @@ body {
 	width: 90%;
 	margin: auto;
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 /* * ============================== */
@@ -99,6 +98,12 @@ main .contenido .fecha {
 	color: #B5B5B5;
 }
 
+h1 {
+	display:flex;
+	justify-content: center;
+	padding: 1em;
+}
+
 /* * ============================== */
 /* * ============ ASIDE =========== */
 /* * ============================== */
@@ -130,13 +135,25 @@ aside .indice a {
 }
 
 /* * ============================== */
-/* * ========== FOOTER (MENO MARGEN INFERIOR) ============ */
+/* * ========== FOOTER ============ */
 /* * ============================== */
-footer .navbar {
+.footer {	
+	background: #1D2F3D;
 	position: sticky;
 	bottom: 0;
-
-
+	display: flex;
+	justify-content: space-between;
+}
+.footer	ul {
+	margin: 0;
+}
+.footer	li {
+	display: inline-block;
+	padding: 20px;
+	text-align: center;
+}
+.footer	a {
+	color: #fff;
 }
 
 
