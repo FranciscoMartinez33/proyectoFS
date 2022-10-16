@@ -55,7 +55,7 @@ body {
 }
 
 /* * ============================== */
-/* * ===== CONTENEDOR IMAGEN ====== */
+/* * ============ IMAGEN ========== */
 /* * ============================== */
 
 .contenedor-imagen {
@@ -68,6 +68,10 @@ body {
 	vertical-align: top;
 	object-fit: cover;
 	object-position: 0 bottom;
+}
+
+.img-secundaria-producto {
+	width: 100px;
 }
 
 /* * ============================== */
