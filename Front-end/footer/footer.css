@@ -1,0 +1,46 @@
+.main-footer{
+    background: #000000;
+    color: white;
+    padding: 30px 20px;
+  }
+  .footer__title{
+    border-bottom: 1px dotted #555;
+    padding-bottom: 20px;
+  }
+  .footer__txt {
+    color: rgb(155, 155, 155);
+  }
+  .footer__link{
+    color: rgb(100, 100, 100);
+    text-decoration: none;
+    display: block;
+    padding: 10px 0;
+  }
+  
+  .footer__input{
+    background: #000000;
+    width: 100%;
+    display: block;
+    padding: 8px;
+    border: 1px solid #555;
+  }
+  .copy {
+    color: #555;
+  }
+  .copy {
+    grid-column-start: span 4;
+    text-align: center;
+  }
+
+  @media screen and (min-width:1024px) { 
+    .container{
+      width: 1000px;
+      margin: auto;
+    }
+   }
+
+  .main-footer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
