@@ -28,9 +28,6 @@ Se invita a la comunidad de diseñadores de indumentaria a incorporar y ofrecer 
 
 •	Martinez, Francisco 
   https://github.com/FranciscoMartinez33
-  
-•	Martiniano, Jose Lurgo Johnston
-  https://github.com/MartinianoLurgo
 
 •	Narvaez, Juan Carlos 
   https://github.com/ProgramadorPegasus
