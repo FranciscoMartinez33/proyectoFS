@@ -35,7 +35,8 @@ Se invita a la comunidad de diseñadores de indumentaria a incorporar y ofrecer 
 •	Osorio Duarte, Cintia 
   https://github.com/CintiaOsorioDuartesakura
 
-•	Schejtman, Daniela 
+•	Schejtman, Daniela
+  https://github.com/danielasch00
 
 • Torres, Jesús Fernando 
   https://github.com/JFerT
