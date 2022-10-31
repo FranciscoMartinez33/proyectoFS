@@ -27,6 +27,7 @@ body {
 	position: fixed;
 	top: 0;
 	width: 100%;
+	z-index: 4;
 }
 
 .navbar2 a {
@@ -94,7 +95,7 @@ main .contenido p {
 main .contenido .titulo {
     font-family: 'Montserrat', sans-serif;
 	font-weight: normal;
-	padding-top: 40px;
+	/*padding-top: 40px;*/
 }
 
 main .contenido .fecha {
@@ -120,8 +121,7 @@ aside {
 	padding: 20px;
 	border-radius: 3px;
 	position: sticky;
-	top: 15px;
-	
+	top: 15px;	
 }
 
 aside .titulo {
@@ -197,3 +197,4 @@ aside .indice a {
 	padding: 1%;
 	font-family: 'Noto Sans JP', sans-serif;
 }
+
