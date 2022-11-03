@@ -1,8 +1,0 @@
-## RESUMEN
-
-1_El usuario puede entrar a la pagina web y visualizar todos los productos.
-2_El usuario tiene la posibilidad de loguearse para dejar asentado en un formulario sus medidas corporales (sistema de talla) para un producto determinado.
-3_Por el momento no existe carrito de compras.
-4_Por el momento faltan categorías de producto (e imágenes sobre esas categorías) que serán incorporadas 
-5_Falta desarrollar secciones del sitio
-
