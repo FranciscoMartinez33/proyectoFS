@@ -5,19 +5,19 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 
 -- -----------------------------------------------------
--- Schema VirtualTrend
+-- Schema VirtualTrends
 -- -----------------------------------------------------
 
 -- -----------------------------------------------------
--- Schema VirtualTrend
+-- Schema VirtualTrends
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `VirtualTrend` DEFAULT CHARACTER SET utf8 ;
-USE `VirtualTrend` ;
+CREATE SCHEMA IF NOT EXISTS `VirtualTrends` DEFAULT CHARACTER SET utf8 ;
+USE `VirtualTrends` ;
 
 -- -----------------------------------------------------
--- Table `VirtualTrend`.`Provincia`
+-- Table `VirtualTrends`.`Provincia`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Provincia` (
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Provincia` (
   `id_provincia` INT NOT NULL,
   `provincia_nom` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id_provincia`))
@@ -25,9 +25,116 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `VirtualTrend`.`Medida_corporal_personal`
+-- Table `VirtualTrends`.`Usuario`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Medida_corporal_personal` (
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Usuario` (
+  `id_usuario` INT NOT NULL,
+  `dni` INT NOT NULL,
+  `nombre` VARCHAR(30) NOT NULL,
+  `apellido` VARCHAR(30) NOT NULL,
+  `contraseña` INT NOT NULL,
+  `teléfono` VARCHAR(15) NOT NULL,
+  `dirección` VARCHAR(45) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `cod_postal` VARCHAR(10) NOT NULL,
+  `ciudad` VARCHAR(45) NOT NULL,
+  `id_provincia` INT NOT NULL,
+  PRIMARY KEY (`id_usuario`, `id_provincia`),
+  UNIQUE INDEX `Contraseña_UNIQUE` (`contraseña` ASC) VISIBLE,
+  INDEX `fk_Persona_Provincia1_idx` (`id_provincia` ASC) VISIBLE,
+  CONSTRAINT `fk_Persona_Provincia1`
+    FOREIGN KEY (`id_provincia`)
+    REFERENCES `VirtualTrends`.`Provincia` (`id_provincia`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `VirtualTrends`.`Diseñador`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Diseñador` (
+  `id_diseñador` INT NOT NULL,
+  `dni` INT NOT NULL,
+  `nombre` VARCHAR(30) NOT NULL,
+  `apellido` VARCHAR(30) NOT NULL,
+  `contraseña` VARCHAR(8) NOT NULL,
+  `teléfono` VARCHAR(15) NOT NULL,
+  `dirección` VARCHAR(25) NOT NULL,
+  `email` VARCHAR(45) NOT NULL,
+  `cod_postal` VARCHAR(10) NOT NULL,
+  `ciudad` VARCHAR(45) NOT NULL,
+  `id_provincia` INT NOT NULL,
+  PRIMARY KEY (`id_diseñador`, `id_provincia`),
+  UNIQUE INDEX `contraseña_UNIQUE` (`contraseña` ASC) VISIBLE,
+  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
+  INDEX `fk_Diseñador_Provincia1_idx` (`id_provincia` ASC) VISIBLE,
+  CONSTRAINT `fk_Diseñador_Provincia1`
+    FOREIGN KEY (`id_provincia`)
+    REFERENCES `VirtualTrends`.`Provincia` (`id_provincia`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `VirtualTrends`.`Categoria_producto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Categoria_producto` (
+  `id_categoria_producto` INT NOT NULL,
+  `nombre_categoria` VARCHAR(30) NOT NULL,
+  PRIMARY KEY (`id_categoria_producto`))
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `VirtualTrends`.`Producto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Producto` (
+  `id_producto` INT NOT NULL,
+  `nombre_producto` VARCHAR(45) NOT NULL,
+  `id_categoria_producto` INT NOT NULL,
+  `descripcion_producto` VARCHAR(45) NULL,
+  `precio_producto` INT NOT NULL,
+  `id_diseñador` INT NOT NULL,
+  PRIMARY KEY (`id_producto`, `id_diseñador`, `id_categoria_producto`),
+  INDEX `fk_Producto_Diseñador1_idx` (`id_diseñador` ASC) VISIBLE,
+  INDEX `fk_Categoria_id_categoria_producto_idx` (`id_categoria_producto` ASC) VISIBLE,
+  CONSTRAINT `fk_Producto_Diseñador1`
+    FOREIGN KEY (`id_diseñador`)
+    REFERENCES `VirtualTrends`.`Diseñador` (`id_diseñador`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Categoria_id_categoria_producto`
+    FOREIGN KEY (`id_categoria_producto`)
+    REFERENCES `VirtualTrends`.`Categoria_producto` (`id_categoria_producto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `VirtualTrends`.`Imagen`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Imagen` (
+  `id_imagen` INT NOT NULL,
+  `nombre` VARCHAR(30) NOT NULL,
+  `imagen` BLOB NULL,
+  `id_producto` INT NOT NULL,
+  PRIMARY KEY (`id_imagen`, `id_producto`),
+  INDEX `fk_Imágenes_Producto1_idx` (`id_producto` ASC) VISIBLE,
+  CONSTRAINT `fk_Imágenes_Producto1`
+    FOREIGN KEY (`id_producto`)
+    REFERENCES `VirtualTrends`.`Producto` (`id_producto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `VirtualTrends`.`Medida_corporal_personal`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Medida_corporal_personal` (
   `id_medida_corporal_personal` INT NOT NULL,
   `medida_hombro` VARCHAR(45) NULL,
   `media_cuello` VARCHAR(45) NULL,
@@ -40,128 +147,21 @@ CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Medida_corporal_personal` (
   `ancho_de_espalda` VARCHAR(45) NULL,
   `contorno_pierna` VARCHAR(45) NULL,
   `largo_de_pierna` VARCHAR(45) NULL,
-  PRIMARY KEY (`id_medida_corporal_personal`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `VirtualTrend`.`Usuario`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Usuario` (
   `id_usuario` INT NOT NULL,
-  `dni` INT NOT NULL,
-  `nombre` VARCHAR(30) NOT NULL,
-  `apellido` VARCHAR(30) NOT NULL,
-  `contraseña` INT NOT NULL,
-  `teléfono` VARCHAR(15) NOT NULL,
-  `dirección` VARCHAR(45) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `cod_postal` INT NOT NULL,
-  `ciudad` VARCHAR(45) NOT NULL,
-  `id_provincia` INT NOT NULL,
-  `id_medida_corporal_personal` INT NOT NULL,
-  PRIMARY KEY (`id_usuario`, `id_provincia`, `id_medida_corporal_personal`),
-  UNIQUE INDEX `Contraseña_UNIQUE` (`contraseña` ASC) VISIBLE,
-  INDEX `fk_Persona_Provincia1_idx` (`id_provincia` ASC) VISIBLE,
-  INDEX `fk_Usuario_Medida_corporal_personal1_idx` (`id_medida_corporal_personal` ASC) VISIBLE,
-  CONSTRAINT `fk_Persona_Provincia1`
-    FOREIGN KEY (`id_provincia`)
-    REFERENCES `VirtualTrend`.`Provincia` (`id_provincia`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Usuario_Medida_corporal_personal1`
-    FOREIGN KEY (`id_medida_corporal_personal`)
-    REFERENCES `VirtualTrend`.`Medida_corporal_personal` (`id_medida_corporal_personal`)
+  PRIMARY KEY (`id_medida_corporal_personal`, `id_usuario`),
+  INDEX `fk_Medida_corporal_personal_Usuario1_idx` (`id_usuario` ASC) VISIBLE,
+  CONSTRAINT `fk_Medida_corporal_personal_Usuario1`
+    FOREIGN KEY (`id_usuario`)
+    REFERENCES `VirtualTrends`.`Usuario` (`id_usuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `VirtualTrend`.`Diseñador`
+-- Table `VirtualTrends`.`Medida_estandar`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Diseñador` (
-  `id_diseñador` INT NOT NULL,
-  `dni` INT NOT NULL,
-  `nombre` VARCHAR(30) NOT NULL,
-  `apellido` VARCHAR(30) NOT NULL,
-  `contraseña` VARCHAR(8) NOT NULL,
-  `teléfono` VARCHAR(15) NOT NULL,
-  `dirección` VARCHAR(25) NOT NULL,
-  `email` VARCHAR(45) NOT NULL,
-  `cod_postal` INT NOT NULL,
-  `ciudad` VARCHAR(45) NOT NULL,
-  `id_provincia` INT NOT NULL,
-  PRIMARY KEY (`id_diseñador`, `id_provincia`),
-  UNIQUE INDEX `contraseña_UNIQUE` (`contraseña` ASC) VISIBLE,
-  UNIQUE INDEX `email_UNIQUE` (`email` ASC) VISIBLE,
-  INDEX `fk_Diseñador_Provincia1_idx` (`id_provincia` ASC) VISIBLE,
-  CONSTRAINT `fk_Diseñador_Provincia1`
-    FOREIGN KEY (`id_provincia`)
-    REFERENCES `VirtualTrend`.`Provincia` (`id_provincia`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `VirtualTrend`.`Categoria_producto`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Categoria_producto` (
-  `id_categoria_producto` INT NOT NULL,
-  `nombre_categoria` VARCHAR(30) NOT NULL,
-  PRIMARY KEY (`id_categoria_producto`))
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `VirtualTrend`.`Producto`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Producto` (
-  `id_producto` INT NOT NULL,
-  `nombre_producto` VARCHAR(45) NOT NULL,
-  `id_categoria_producto` INT NOT NULL,
-  `descripcion_producto` VARCHAR(45) NULL,
-  `precio_producto` INT NOT NULL,
-  `id_diseñador` INT NOT NULL,
-  PRIMARY KEY (`id_producto`, `id_diseñador`, `id_categoria_producto`),
-  INDEX `fk_Producto_Diseñador1_idx` (`id_diseñador` ASC) VISIBLE,
-  INDEX `fk_Categoria_id_categoria_producto_idx` (`id_categoria_producto` ASC) VISIBLE,
-  CONSTRAINT `fk_Producto_Diseñador1`
-    FOREIGN KEY (`id_diseñador`)
-    REFERENCES `VirtualTrend`.`Diseñador` (`id_diseñador`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Categoria_id_categoria_producto`
-    FOREIGN KEY (`id_categoria_producto`)
-    REFERENCES `VirtualTrend`.`Categoria_producto` (`id_categoria_producto`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `VirtualTrend`.`Imagen`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Imagen` (
-  `id_imagen` INT NOT NULL,
-  `nombre` VARCHAR(30) NOT NULL,
-  `imagen` BLOB NULL,
-  `id_producto` INT NOT NULL,
-  PRIMARY KEY (`id_imagen`, `id_producto`),
-  INDEX `fk_Imágenes_Producto1_idx` (`id_producto` ASC) VISIBLE,
-  CONSTRAINT `fk_Imágenes_Producto1`
-    FOREIGN KEY (`id_producto`)
-    REFERENCES `VirtualTrend`.`Producto` (`id_producto`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `VirtualTrend`.`Medida_estandar`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Medida_estandar` (
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Medida_estandar` (
   `id_medida_estandar` INT NOT NULL,
   `nombre_medida` VARCHAR(20) NOT NULL,
   PRIMARY KEY (`id_medida_estandar`))
@@ -169,9 +169,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `VirtualTrend`.`Forma_pago`
+-- Table `VirtualTrends`.`Forma_pago`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Forma_pago` (
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Forma_pago` (
   `id_forma_pago` INT NOT NULL,
   `nombre` VARCHAR(25) NOT NULL,
   PRIMARY KEY (`id_forma_pago`))
@@ -179,9 +179,9 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `VirtualTrend`.`Forma_envio`
+-- Table `VirtualTrends`.`Forma_envio`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Forma_envio` (
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Forma_envio` (
   `id_forma_envio` INT NOT NULL,
   `nombre` VARCHAR(25) NOT NULL,
   PRIMARY KEY (`id_forma_envio`))
@@ -189,11 +189,10 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `VirtualTrend`.`Carrito_compra`
+-- Table `VirtualTrends`.`Carrito_compra`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Carrito_compra` (
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Carrito_compra` (
   `id_Carrito_compra` INT NOT NULL,
-  `valor_total` INT NOT NULL,
   `id_forma_pago` INT NOT NULL,
   `id_forma_envio` INT NOT NULL,
   `id_usuario` INT NOT NULL,
@@ -203,51 +202,26 @@ CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Carrito_compra` (
   INDEX `fk_Carrito_compra_Usuario1_idx` (`id_usuario` ASC) VISIBLE,
   CONSTRAINT `fk_Carrito_compra_Forma_pago1`
     FOREIGN KEY (`id_forma_pago`)
-    REFERENCES `VirtualTrend`.`Forma_pago` (`id_forma_pago`)
+    REFERENCES `VirtualTrends`.`Forma_pago` (`id_forma_pago`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Carrito_compra_Forma_envio1`
     FOREIGN KEY (`id_forma_envio`)
-    REFERENCES `VirtualTrend`.`Forma_envio` (`id_forma_envio`)
+    REFERENCES `VirtualTrends`.`Forma_envio` (`id_forma_envio`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Carrito_compra_Usuario1`
     FOREIGN KEY (`id_usuario`)
-    REFERENCES `VirtualTrend`.`Usuario` (`id_usuario`)
+    REFERENCES `VirtualTrends`.`Usuario` (`id_usuario`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
--- Table `VirtualTrend`.`Carrito_compra-producto`
+-- Table `VirtualTrends`.`Medidas_producto`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Carrito_compra-producto` (
-  `id_Carrito_compra` INT NOT NULL,
-  `producto_id_producto` INT NOT NULL,
-  `cantidad_producto` INT NOT NULL,
-  `subtotal_por_producto` INT NOT NULL,
-  `medida` INT NOT NULL,
-  PRIMARY KEY (`id_Carrito_compra`, `producto_id_producto`),
-  INDEX `fk_Carrito_compra_has_Producto_Producto1_idx` (`producto_id_producto` ASC) VISIBLE,
-  INDEX `fk_Carrito_compra_has_Producto_Carrito_compra1_idx` (`id_Carrito_compra` ASC) VISIBLE,
-  CONSTRAINT `fk_Carrito_compra_has_Producto_Carrito_compra1`
-    FOREIGN KEY (`id_Carrito_compra`)
-    REFERENCES `VirtualTrend`.`Carrito_compra` (`id_Carrito_compra`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_Carrito_compra_has_Producto_Producto1`
-    FOREIGN KEY (`producto_id_producto`)
-    REFERENCES `VirtualTrend`.`Producto` (`id_producto`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `VirtualTrend`.`Medidas-producto`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Medidas-producto` (
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Medidas_producto` (
   `id_producto` INT NOT NULL,
   `id_medida_estandar` INT NOT NULL,
   PRIMARY KEY (`id_producto`, `id_medida_estandar`),
@@ -255,12 +229,44 @@ CREATE TABLE IF NOT EXISTS `VirtualTrend`.`Medidas-producto` (
   INDEX `fk_Producto_has_Medida_estandar_Producto1_idx` (`id_producto` ASC) VISIBLE,
   CONSTRAINT `fk_Producto_has_Medida_estandar_Producto1`
     FOREIGN KEY (`id_producto`)
-    REFERENCES `VirtualTrend`.`Producto` (`id_producto`)
+    REFERENCES `VirtualTrends`.`Producto` (`id_producto`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_Producto_has_Medida_estandar_Medida_estandar1`
     FOREIGN KEY (`id_medida_estandar`)
-    REFERENCES `VirtualTrend`.`Medida_estandar` (`id_medida_estandar`)
+    REFERENCES `VirtualTrends`.`Medida_estandar` (`id_medida_estandar`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `VirtualTrends`.`Carrito_compra_producto`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `VirtualTrends`.`Carrito_compra_producto` (
+  `id_Carrito_compra` INT NOT NULL,
+  `id_producto` INT NOT NULL,
+  `cantidad_producto` INT NOT NULL,
+  `subtotal_por_producto` INT NOT NULL,
+  `medida` INT NOT NULL,
+  `id_medida_estandar` INT NOT NULL,
+  PRIMARY KEY (`id_Carrito_compra`, `id_producto`, `id_medida_estandar`),
+  INDEX `fk_Carrito_compra_has_Producto_Producto1_idx` (`id_producto` ASC) VISIBLE,
+  INDEX `fk_Carrito_compra_has_Producto_Carrito_compra1_idx` (`id_Carrito_compra` ASC) VISIBLE,
+  INDEX `fk_Carrito_compra_producto_Medidas_producto1_idx` (`id_medida_estandar` ASC) VISIBLE,
+  CONSTRAINT `fk_Carrito_compra_has_Producto_Carrito_compra1`
+    FOREIGN KEY (`id_Carrito_compra`)
+    REFERENCES `VirtualTrends`.`Carrito_compra` (`id_Carrito_compra`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Carrito_compra_has_Producto_Producto1`
+    FOREIGN KEY (`id_producto`)
+    REFERENCES `VirtualTrends`.`Producto` (`id_producto`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_Carrito_compra_producto_Medidas_producto1`
+    FOREIGN KEY (`id_medida_estandar`)
+    REFERENCES `VirtualTrends`.`Medidas_producto` (`id_medida_estandar`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
