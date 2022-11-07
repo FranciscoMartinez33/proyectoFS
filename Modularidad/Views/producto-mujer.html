@@ -9,6 +9,7 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
 		
+	<link rel="shortcut icon" href="/Modularidad/Views/imagenes/Logo.ico">
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
 	<link rel="stylesheet" href="css/estilos.css">
 </head>
@@ -28,10 +29,10 @@
 				  <a class="nav-link">Diseñadores</a>
 				</div>
 			  </div>
-			  <a class="nav-link col" href="index.html" title="Inicio">Virtual Trends</a>
+			  <a class="nav-link col" href="index.html" title="Inicio"><img id="logo" src="/Modularidad/Views/imagenes/Logo.png" alt=""></a>
 			  <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-				  <a class="nav-link " href="login.html">Inicio de Sesión</a>
+					<a class="nav-link button-one" href="login.html">Iniciar sesión</a>
 				</div>
 			  </div>
 			</div>
@@ -71,7 +72,95 @@
 					<div class="col-md-4">
 						<div class="post">
 							<h1 class="titulo">Remera asimétrica</h1>
-							<p>$3500</p>
+							<p class="precio">$3500</p>
+							<p>Remera de mujer, cuello redondo, con corte a un lado, dando un diseño asimétrico. 100% algodón.</p>
+						</div>
+						<form>
+							<div class="mb-3">
+							<label for="medida-estandar" class="form-label">Seleccionar talle</label>	
+							<select class="form-select" id="medida-estandar" name="medida-estandar">
+								<option value="1">S</option>
+								<option value="2" selected>M</option>
+								<option value="3">L</option>
+								<option value="4">XL</option>
+							</select>
+							<button type="button" class="btn btn-outline-dark p-2 m-3">Personalizar medidas</button>
+							</div>
+							<div class="mb-3">
+							<select class="form-select" id="color-prenda" name="color">
+								<option value="1" selected>Salmón</option>
+								<option value="2">Blanco</option>
+								<option value="3">Negro</option>
+								<option value="4">Gris</option>
+							</select>
+							</div>
+							<div class="mb-3">
+							<input type="number" min="1" max="999" value="1" id="cantidad" name="cantidad" />
+							<button type="submit" class="btn btn-outline-dark">Añadir al carrito</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_2.webp" alt="prenda">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_3.webp" alt="">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_4.webp" alt="">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_5.webp" alt="">
+					</div>
+					<div class="col-md-6">
+						<img class="img-principal-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_2.webp" alt="prenda">
+					</div>
+					<div class="col-md-4">
+						<div class="post">
+							<h1 class="titulo">Remera asimétrica</h1>
+							<p class="precio">$3500</p>
+							<p>Remera de mujer, cuello redondo, con corte a un lado, dando un diseño asimétrico. 100% algodón.</p>
+						</div>
+						<form>
+							<div class="mb-3">
+							<label for="medida-estandar" class="form-label">Seleccionar talle</label>	
+							<select class="form-select" id="medida-estandar" name="medida-estandar">
+								<option value="1">S</option>
+								<option value="2" selected>M</option>
+								<option value="3">L</option>
+								<option value="4">XL</option>
+							</select>
+							<button type="button" class="btn btn-outline-dark p-2 m-3">Personalizar medidas</button>
+							</div>
+							<div class="mb-3">
+							<select class="form-select" id="color-prenda" name="color">
+								<option value="1" selected>Salmón</option>
+								<option value="2">Blanco</option>
+								<option value="3">Negro</option>
+								<option value="4">Gris</option>
+							</select>
+							</div>
+							<div class="mb-3">
+							<input type="number" min="1" max="999" value="1" id="cantidad" name="cantidad" />
+							<button type="submit" class="btn btn-outline-dark">Añadir al carrito</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_2.webp" alt="prenda">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_3.webp" alt="">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_4.webp" alt="">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_5.webp" alt="">
+					</div>
+					<div class="col-md-6">
+						<img class="img-principal-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_2.webp" alt="prenda">
+					</div>
+					<div class="col-md-4">
+						<div class="post">
+							<h1 class="titulo">Remera asimétrica</h1>
+							<p class="precio">$3500</p>
 							<p>Remera de mujer, cuello redondo, con corte a un lado, dando un diseño asimétrico. 100% algodón.</p>
 						</div>
 						<form>

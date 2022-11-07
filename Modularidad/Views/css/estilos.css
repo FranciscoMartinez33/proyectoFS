@@ -33,18 +33,19 @@ body {
 .navbar2 a {
 	color: #fff;
 	display: inline-block;
-	padding: 20px;
+	padding: 10px 10px;
 	width: 100%;
 	text-align: center;
 	color: rgb(8, 8, 8);
 	transition: .3s ease-out all;
+	margin: 0px 30px;
+	border-radius: 20px;
 }
 
 .navbar2 a:hover {
-	background: #1D2F3D;
+	background: #181818;
 	color: #fff;
-	text-decoration: none;
-}
+	text-decoration: none;}
 
 .contenedor {
 	max-width: 1000px;
@@ -52,6 +53,10 @@ body {
 	margin: auto;
 	display: flex;
 	justify-content: center;
+}
+
+#logo {
+	max-width: 300px;
 }
 
 /* * ============================== */
@@ -86,6 +91,12 @@ main {
 	min-height: 100vh;
 }
 
+main .contenido {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 main .contenido p {
 	margin-bottom: 20px;
 	line-height: 30px;
@@ -109,40 +120,33 @@ h1 {
 	padding: 1em;
 }
 
-/* * ============================== */
-/* * ============ ASIDE =========== */
-/* * ============================== */
-
-aside {
-	min-width: 30%;
-	margin: 40px 20px 20px 0;
-	height: 100%;
-	background: #1D2F3D;
-	padding: 20px;
-	border-radius: 3px;
-	position: sticky;
-	top: 15px;	
+.post {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
-aside .titulo {
-	font-family: 'Montserrat', sans-serif;
-	font-weight: normal;
-	font-size: 24px;
-	margin-bottom: 20px;
-	color: #f2f2f2;
+.precio {
+	font-size: 30px;
 }
 
-aside .indice a {
-	display: block;
-	margin-bottom: 10px;
-	color: #FFCD48;
+.titulo {
+	font-size:50px;
+}
+
+.img-articulo {
+	width: 80%;
+}
+
+.texto-articulo {
+	margin: 50px;
 }
 
 /* * ============================== */
 /* * ========== FOOTER ============ */
 /* * ============================== */
 .footer {	
-	background: #1D2F3D;
+	background: #181818;
 	position: sticky;
 	bottom: 0;
 	display: flex;
