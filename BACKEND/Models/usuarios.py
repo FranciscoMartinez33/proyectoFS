@@ -75,3 +75,45 @@ class usuario:
         self.Id_provincia=id_provincia
     def __str__(self):
         return("el numero identificador del usuario es : "+ str(self.Id_usuario)+"su dni es : " + str(self.Dni) + "su nombre es: " +str(self.Nombre) + "su apellido es: " +str(self.Apellido))
+
+import mysql.connector
+class usuarios():
+    def __init__(self) ->None:
+        try:
+            self.conexion=mysql.connector.connect(
+                host='localhost',
+                port=3306,
+                user='root',
+                password='38182262',
+                db='virtualtrends'
+            )
+        except mysql.connector.Error as descripcionError:
+            print("no se puede conectar a la base de datos")
+#primera operacion CRUD:Insert
+    def InsertarUsuario(self,id_ususario,dni,nombre,apellido,contraseña,telefono,direccion,email,cod_postal,ciudad,id_provincia):
+        if self.conexion.is_connected():
+            try:
+                cursor=self.conexion.cursor()
+                sentenciaSQL="INSERT INTO usuario VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)"
+                data=(id_ususario,dni,nombre,apellido,contraseña,telefono,direccion,email,cod_postal,ciudad,id_provincia)
+                
+                cursor.execute(sentenciaSQL,data)
+                self.conexion.commit()
+                self.conexion.close()
+            except:
+                print("no se concreto sentencia a la base de datos")
+
+usuario8=usuarios()
+usuario8.InsertarUsuario('8','12121213','Martin','Alvarez','676789','152345123','Alsina 343','martinalv@gmail.com','5014','Cordoba','1')
+
+
+
+
+
+
+
+
+
+
+
+
