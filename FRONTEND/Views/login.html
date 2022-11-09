@@ -63,15 +63,17 @@
 						¡Bienvenido! Iniciá sesión para disfrutar la experiencia de personalizar al máximo y comprar la ropa de tus sueños.
 						Si todavía no te registraste, completá el formulario en la parte inferior.
 					</p>
-					<form>
+					<form name="formulario" action="index.html" >
+						
 						<div class="form">
 							<p>Iniciar sesión</p>
 							<input type="email" name="email" id="email" placeholder="Email" required/>
-							<input type="password" name="pass" id="pass" placeholder="Contraseña" maxlength="10" required />
-							<input type="submit" id="enviar-form-login" value="Entrar">
+							<input type="password" name="pass" id="pass" placeholder="Contraseña" maxlength="10" required/>
+							<p id="mensaje-login"></p>
+							<input type="submit" id="enviar-form-login" onclick="return validateForm()" value="Entrar">
 						</div>
 					</form>
-					<form>
+					<form name="formulario2" action="index.html"  onsubmit="return validateForm2()" > 
 						<div class="form">
 							<p>Si no tenés cuenta, completá el siguiente formulario para registrarte</p>
 							<input type="text" name="nombre" id="nombre" placeholder="Nombre" maxlength="30" required/>
@@ -108,8 +110,8 @@
 							<input type="text" name="ciudad" id="ciudad" placeholder="Ciudad" required/>
 							<input type="text" name="direccion" id="direccion" placeholder="Dirección" />
 							<input type="number" name="codigo-postal" id="codigo-postal" placeholder="Código postal" />
-							<input type="email" name="email" id="email" placeholder="Email" required/>
-							<input type="password" name="pass" id="pass" placeholder="Contraseña" maxlength="10" required />
+							<input type="email" name="email" id="email" placeholder="Email" />
+							<input type="password" name="pass" id="pass" placeholder="Contraseña" maxlength="10" />
 							<input type="submit" id="enviar-form-registro" value="Registrarme">
 						</div>
 					</form>	
@@ -141,6 +143,7 @@
 		
 	</footer>
 	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>
