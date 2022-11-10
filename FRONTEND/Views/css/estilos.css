@@ -24,7 +24,7 @@ body {
 
 .navbar2 {
 	background: #FFCD48;
-	position: fixed;
+	position:sticky;
 	top: 0;
 	width: 100%;
 	z-index: 4;
@@ -59,7 +59,7 @@ body {
 /* * ============================== */
 
 .contenedor-imagen {
-	height: 100vh;
+	/*height: 100vh;*/
 }
 
 .contenedor-imagen img {
