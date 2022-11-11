@@ -1,7 +1,5 @@
-## Clase Usuarios()
-#  Contiene los atributos: Nombre, Dni, Apellido, Contrasenia, Telefono, Direccion, Email, Cod_postal, Cidudad, Provincia
-# Conecta con la tabla Usuarios de la base de datos de MySQL, donde agrega registro o modifica registros
-# RegistrarUsuario()
+# Conecta con la tabla Usuario de la base de datos de MySQL, donde agrega registro o modifica registros
+# InsertarrUsuario()
 # ModificarUsuario()
 
 class usuario:
@@ -103,8 +101,8 @@ class usuarios():
             except:
                 print("no se concreto sentencia a la base de datos")
 
-usuario8=usuarios()
-usuario8.InsertarUsuario('8','12121213','Martin','Alvarez','676789','152345123','Alsina 343','martinalv@gmail.com','5014','Cordoba','1')
+#usuario8=usuarios()
+#usuario8.InsertarUsuario('8','12121213','Martin','Alvarez','676789','152345123','Alsina 343','martinalv@gmail.com','5014','Cordoba','1')
 
 
 
