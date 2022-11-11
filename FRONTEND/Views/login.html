@@ -68,7 +68,7 @@
 						<div class="form">
 							<p>Iniciar sesión</p>
 							<input type="email" name="email" id="email" placeholder="Email" required/>
-							<input type="password" name="pass" id="pass" placeholder="Contraseña" maxlength="10" required/>
+							<input type="password" name="pass" id="pass" placeholder="Contraseña" required minlength="8"/>
 							<p id="mensaje-login"></p>
 							<input type="submit" id="enviar-form-login" onclick="return validateForm()" value="Entrar">
 						</div>
@@ -78,8 +78,8 @@
 							<p>Si no tenés cuenta, completá el siguiente formulario para registrarte</p>
 							<input type="text" name="nombre" id="nombre" placeholder="Nombre" maxlength="30" required/>
 							<input type="text" name="apellido" id="apellido" placeholder="Apellido" maxlength="30" required/>
-							<input type="number" name="dni" id="dni" placeholder="DNI" max="500000000" required/>
-							<input type="tel" name="telefono" id="telefono" placeholder="Teléfono" required/>
+							<input type="number" name="dni" id="dni" placeholder="DNI" min="1000000" max="99999999" required/>
+							<input type="number" name="telefono" id="telefono" placeholder="Teléfono" required/>
 							<select id="provincia" name="provincia" required>
 								<option value="1">Buenos Aires</option>
 								<option value="2">CABA</option>
@@ -111,7 +111,7 @@
 							<input type="text" name="direccion" id="direccion" placeholder="Dirección" />
 							<input type="number" name="codigo-postal" id="codigo-postal" placeholder="Código postal" />
 							<input type="email" name="email" id="email" placeholder="Email" />
-							<input type="password" name="pass" id="pass" placeholder="Contraseña" maxlength="10" />
+							<input type="password" name="pass" id="pass" placeholder="Contraseña" required minlength="8"/>
 							<input type="submit" id="enviar-form-registro" value="Registrarme">
 						</div>
 					</form>	
