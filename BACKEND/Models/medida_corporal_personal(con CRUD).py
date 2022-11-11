@@ -115,12 +115,13 @@ class medidas_corporales_personal():
 #medida5.InsertarMedidas('5','13','36','24','91','71','36','93','20','35','45','null','8')
 
 #segunda operacion CRUD:Read o leer(select)
-    def BuscarMedidas(self):
+    def BuscarMedidas(self,ID):
         if self.conexion.is_connected():
             try:
                  cursor=self.conexion.cursor()
-                 sentenciaSQL="SELECT * FROM medida_corporal_personal where id_usuario =5"
-                 cursor.execute(sentenciaSQL)
+                 sentenciaSQL="SELECT * FROM medida_corporal_personal where id_usuario =%s"
+                 data=(ID,)
+                 cursor.execute(sentenciaSQL,data)
                  resultadoREAD=cursor.fetchall()
                  self.conexion.close()
                  return resultadoREAD
@@ -128,15 +129,16 @@ class medidas_corporales_personal():
                 print("No se pudo concretar la sentencia en la base de datos")
 
 #medidabuscada=medidas_corporales_personal()
-#print(medidabuscada.BuscarMedidas())
+#print(medidabuscada.BuscarMedidas(2))
 
 # tercera operacion CRUD:UPDATE
-    def ActualizarMedidas(self):
+    def ActualizarMedidas(self,medida_cintura_actualizada,id_usuario):
         if self.conexion.is_connected():
             try:
                  cursor=self.conexion.cursor()
-                 sentenciaSQL="UPDATE medida_corporal_personal SET cintura='73' WHERE id_usuario=6"
-                 cursor.execute(sentenciaSQL)
+                 sentenciaSQL="UPDATE medida_corporal_personal SET cintura= %s WHERE id_usuario= %s"
+                 data=(medida_cintura_actualizada,id_usuario)
+                 cursor.execute(sentenciaSQL,data)
                  self.conexion.commit()
                  self.conexion.close()
                  
@@ -144,15 +146,16 @@ class medidas_corporales_personal():
                 print("No se pudo concretar la sentencia en la base de datos")
 
 #actualizarmedida6=medidas_corporales_personal()
-#actualizarmedida6.ActualizarMedidas()
+#actualizarmedida6.ActualizarMedidas(73,6)
 
 #cuarta operacion CRUD:DELETE
-    def EliminarRegistroMedidas(self):
+    def EliminarRegistroMedidas(self,ID_usuario):
         if self.conexion.is_connected():
             try:
                  cursor=self.conexion.cursor()
-                 sentenciaSQL="DELETE FROM medida_corporal_personal WHERE id_usuario=6"
-                 cursor.execute(sentenciaSQL)
+                 sentenciaSQL="DELETE FROM medida_corporal_personal WHERE id_usuario=%s"
+                 data=(ID_usuario,)
+                 cursor.execute(sentenciaSQL,data)
                  self.conexion.commit()
                  self.conexion.close()
                  
@@ -160,7 +163,7 @@ class medidas_corporales_personal():
                 print("No se pudo concretar la eliminacion en la base de datos")
 
 #eliminaregistro6=medidas_corporales_personal()
-#eliminaregistro6.EliminarRegistroMedidas()
+#eliminaregistro6.EliminarRegistroMedidas(6)
 #print("se borro el registro de medidas corporales")
 
 
