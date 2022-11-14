@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>VirtualTrend</title>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Noto+Sans+JP&display=swap" rel="stylesheet"> 
+		
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+	<header>
+		<nav class="navbar navbar-expand-lg navbar2">
+			<div class="container-fluid">
+			  <button class="navbar-toggler me-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			  </button>
+			  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+				  <a class="nav-link" href="producto-mujer.html">Mujer</a>
+				  <a class="nav-link" href="producto-hombre.html">Hombre</a>
+				  <a class="nav-link">Diseñadores</a>
+				</div>
+			  </div>
+			  <a class="nav-link col" href="index.html" title="Inicio">Virtual Trends</a>
+			  <div class="collapse navbar-collapse d-lg-flex justify-content-end" id="navbarNavAltMarkup">
+				<div class="navbar-nav">
+				  <a class="nav-link " href="login.html">Inicio de Sesión</a>
+				</div>
+			  </div>
+			</div>
+		</nav>
+		<div class="contenedor-imagen">
+			<a href="#">
+				<img src="https://thumbs.dreamstime.com/b/panorama-esf%C3%A9rico-del-interior-de-la-tienda-de-la-ropa-de-deportes-77953378.jpg" alt="">
+			</a>
+		</div>
+	</header>
+	
+	<main id="blog">
+		<h1 class="titulo"></h1>
+		<!--<div class="contenedor">
+			<aside>
+				<h3 class="titulo">Esto seria un menu</h3>
+				<nav class="indice">
+					<a href="#">Articulo #1</a>
+					<a href="#">Articulo #2</a>
+					<a href="#">Articulo #3</a>
+					<a href="#">Articulo #4</a>
+					<a href="#">Desplazamiento Main</a>
+				</nav>
+			</aside>
+		-->
+			<div class="container">
+				<div class="row">
+					<div class="col-md-2">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_2.webp" alt="prenda">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_3.webp" alt="">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_4.webp" alt="">
+						<img class="img-secundaria-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_5.webp" alt="">
+					</div>
+					<div class="col-md-6">
+						<img class="img-principal-producto" src="imagenes/remera_mujer/20_ASSYMETRICTEE_Custom_View_2.webp" alt="prenda">
+					</div>
+					<div class="col-md-4">
+						<div class="post">
+							<h1 class="titulo">Remera asimétrica</h1>
+							<p>$3500</p>
+							<p>Remera de mujer, cuello redondo, con corte a un lado, dando un diseño asimétrico. 100% algodón.</p>
+						</div>
+						<form>
+							<div class="mb-3">
+							<label for="medida-estandar" class="form-label">Seleccionar talle</label>	
+							<select class="form-select" id="medida-estandar" name="medida-estandar">
+								<option value="1">S</option>
+								<option value="2" selected>M</option>
+								<option value="3">L</option>
+								<option value="4">XL</option>
+							</select>
+							<button type="button" class="btn btn-outline-dark p-2 m-3">Personalizar medidas</button>
+							</div>
+							<div class="mb-3">
+							<select class="form-select" id="color-prenda" name="color">
+								<option value="1" selected>Salmón</option>
+								<option value="2">Blanco</option>
+								<option value="3">Negro</option>
+								<option value="4">Gris</option>
+							</select>
+							</div>
+							<div class="mb-3">
+							<input type="number" min="1" max="999" value="1" id="cantidad" name="cantidad" />
+							<button type="submit" class="btn btn-outline-dark">Añadir al carrito</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		<!--</div>-->
+	</main>
+
+	<footer>
+		<div class="contenedor-imagen">
+			<img src="https://thumbs.dreamstime.com/b/mosc%C3%BA-rusia-mercanc%C3%ADas-de-la-tienda-del-noviembre-para-los-deportes-extremos-d-panorama-esf%C3%A9rico-%C3%A1ngulo-visi%C3%B3n-107433981.jpg" alt="">
+		</div>
+		<div class="footer">
+			<ul>
+			<li><a href="contacto.html">Contacto</a></li>
+			<li><a href="faq.html">FAQ</a></li>
+			<li><a href="https://dia256.com.ar/" target="_blank" rel="noopener noreferrer">Día 256</a></li>
+			</ul>
+			<ul>
+				<li><a href="#">Facebook</a></li>
+				<li><a href="#">Instagram</a></li>
+			</ul>			
+		</div>
+		
+	</footer>
+	<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
